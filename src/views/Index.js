@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import MintingSection from '../components/MintingSection'
 import Roadmap from '../components/Roadmap'
 import Footer from '../components/Footer'
+import Traits from '../components/Traits'
 
 function Index() {
     return (
@@ -19,6 +20,9 @@ function Index() {
             </div>
             <div className="bg-off-white mt-12 md:mt-28">
                 <Roadmap />
+            </div>
+            <div className="bg-white mt-12 md:mt-28">
+                <Traits />
             </div>
             <div className="bg-white mt-12 md:mt-28 pb-2 md:pb-16">
                 <Footer />

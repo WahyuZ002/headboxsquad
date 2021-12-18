@@ -3,7 +3,7 @@ import React from 'react'
 function Roadmap() {
     return (
         <div className="px-12 md:px-20 py-2 md:py-16" id="roadmap">
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-24 text-center">Our Roadmap</h2>
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-24 text-center">Roadmap 1.0</h2>
             <div className="relative max-w-7xl h-full">
                 <div className="absolute left-0 md:left-1/2 ml-4 md:ml-0 border border-gray-200 h-full"></div>
                 <div className="mb-8 flex justify-between items-center w-full md:flex-row-reverse">
