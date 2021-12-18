@@ -1,9 +1,11 @@
-import logo from './logo.svg'
+import Index from './views/Index'
 
 function App() {
     return (
-        <div>
-            <div></div>
+        <div className="text-dark">
+            <div className="py-2 md:py-16">
+                <Index />
+            </div>
         </div>
     )
 }
