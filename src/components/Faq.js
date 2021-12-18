@@ -26,7 +26,7 @@ function Faq(props) {
                 <div className="w-1/3">
                     <h2 className="text-4xl font-bold">Frequently Asked Question</h2>
                     <p className="mt-4">
-                        Can't find the answer you're looking for? Reach out to our <span className="font-semibold text-violet">customer support</span> team.
+                        Can't find the answer you're looking for? Reach out to our <span className="font-semibold text-primary">customer support</span> team.
                     </p>
                 </div>
                 <div className="w-2/3 space-y-8">
