@@ -6,6 +6,7 @@ module.exports = {
                 violet: '#7637EF',
                 magenta: '#FF39DA',
                 dark: '#302C2C',
+                'off-white': '#F3F3FD',
             },
             fontFamily: {
                 'open-sans': 'Open Sans',
