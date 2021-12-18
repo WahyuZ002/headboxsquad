@@ -2,6 +2,7 @@ import React from 'react'
 import Main from '../components/Main'
 import Navbar from '../components/Navbar'
 import MintingSection from '../components/MintingSection'
+import Roadmap from '../components/Roadmap'
 import Footer from '../components/Footer'
 
 function Index() {
@@ -13,15 +14,14 @@ function Index() {
                     <Main />
                 </div>
             </div>
-            <div className="bg-white">
-                <div className="mt-12 md:mt-28">
-                    <MintingSection />
-                </div>
+            <div className="bg-white mt-12 md:mt-28">
+                <MintingSection />
             </div>
-            <div className="bg-white pb-2 md:pb-16">
-                <div className="mt-12 md:mt-28">
-                    <Footer />
-                </div>
+            <div className="bg-off-white mt-12 md:mt-28">
+                <Roadmap />
+            </div>
+            <div className="bg-white mt-12 md:mt-28 pb-2 md:pb-16">
+                <Footer />
             </div>
         </div>
     )
