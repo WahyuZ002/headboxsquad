@@ -2,9 +2,9 @@ import React from 'react'
 
 function Roadmap() {
     return (
-        <div className="px-12 md:px-20 py-2 md:py-16" id="roadmap">
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-24 text-center">Roadmap 1.0</h2>
-            <div className="relative max-w-7xl h-full">
+        <div className="px-12 md:px-20 py-8 md:py-16 mx-auto max-w-[90rem]" id="roadmap">
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center">Roadmap 1.0</h2>
+            <div className="relative max-w-7xl h-full mt-12 md:mt-24">
                 <div className="absolute left-0 md:left-1/2 ml-4 md:ml-0 border border-gray-200 h-full"></div>
                 <div className="mb-8 flex justify-between items-center w-full md:flex-row-reverse">
                     <div className="hidden md:block w-5/12"></div>
@@ -16,8 +16,10 @@ function Roadmap() {
                         </div>
                     </div>
                     <div className="bg-white shadow-2xl shadow-gray-400/10 rounded-xl  w-full md:w-5/12 p-6 md:px-8 md:py-6 ml-8 md:ml-0">
-                        <h3 className="font-bold text-lg">Lorem ipsum</h3>
-                        <p className="mt-3 leading-relaxed tracking-wide text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                        <h3 className="font-bold text-base md:text-lg">Lorem ipsum</h3>
+                        <p className="mt-3 leading-relaxed tracking-wide text-gray-500 text-sm md:text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                        </p>
                     </div>
                 </div>
                 <div className="mb-8 flex justify-between items-center w-full">
@@ -30,8 +32,10 @@ function Roadmap() {
                         </div>
                     </div>
                     <div className="bg-white shadow-2xl shadow-gray-400/10 rounded-xl  w-full md:w-5/12 p-6 md:px-8 md:py-6 ml-8 md:ml-0">
-                        <h3 className="font-bold text-lg">Lorem ipsum</h3>
-                        <p className="mt-3 leading-relaxed tracking-wide text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                        <h3 className="font-bold text-base md:text-lg">Lorem ipsum</h3>
+                        <p className="mt-3 leading-relaxed tracking-wide text-gray-500 text-sm md:text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                        </p>
                     </div>
                 </div>
                 <div className="mb-8 flex justify-between items-center w-full md:flex-row-reverse">
@@ -40,8 +44,10 @@ function Roadmap() {
                         <div class="bg-gray-200 w-8 h-8 rounded-full"></div>
                     </div>
                     <div className="bg-white shadow-2xl shadow-gray-400/10 rounded-xl  w-full md:w-5/12 p-6 md:px-8 md:py-6 ml-8 md:ml-0">
-                        <h3 className="font-bold text-lg">Lorem ipsum</h3>
-                        <p className="mt-3 leading-relaxed tracking-wide text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                        <h3 className="font-bold text-base md:text-lg">Lorem ipsum</h3>
+                        <p className="mt-3 leading-relaxed tracking-wide text-gray-500 text-sm md:text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                        </p>
                     </div>
                 </div>
                 <div className="mb-8 flex justify-between items-center w-full">
@@ -50,8 +56,10 @@ function Roadmap() {
                         <div class="bg-gray-200 w-8 h-8 rounded-full"></div>
                     </div>
                     <div className="bg-white shadow-2xl shadow-gray-400/10 rounded-xl  w-full md:w-5/12 p-6 md:px-8 md:py-6 ml-8 md:ml-0">
-                        <h3 className="font-bold text-lg">Lorem ipsum</h3>
-                        <p className="mt-3 leading-relaxed tracking-wide text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                        <h3 className="font-bold text-base md:text-lg">Lorem ipsum</h3>
+                        <p className="mt-3 leading-relaxed tracking-wide text-gray-500 text-sm md:text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                        </p>
                     </div>
                 </div>
             </div>

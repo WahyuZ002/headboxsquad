@@ -1,10 +1,11 @@
 import React from 'react'
 import logo from '../logo.svg'
+import HamburgerMenu from './HamburgerMenu'
 
-function Navbar(props) {
+function Navbar() {
     return (
-        <div className="px-12 md:px-20">
-            <nav className="flex items-center justify-between">
+        <div className="px-8 md:px-20">
+            <nav className="hidden md:flex items-center justify-between">
                 <img src={logo} alt="Headbox Logo" />
                 <ul className="flex items-center space-x-10 font-semibold">
                     <li>
@@ -38,6 +39,10 @@ function Navbar(props) {
                     Connect to your wallet
                 </button>
             </nav>
+            <div className="flex md:hidden justify-between items-center w-full p-4">
+                <p className="text-sm font-bold uppercase">HeadboxSquad</p>
+                <HamburgerMenu />
+            </div>
         </div>
     )
 }

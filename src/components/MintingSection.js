@@ -4,13 +4,13 @@ import MintingImage from '../assets/images/Minting Image.png'
 function MintingSection() {
     return (
         <div className="flex justify-center">
-            <div className="text-center max-w-[403px] border-[6px] border-dark pt-24 pb-12 px-12 rounded-xl relative">
+            <div className="text-center max-w-xs md:max-w-[403px] border-[6px] border-dark pt-20 md:pt-24 pb-8 md:pb-12 px-6 md:px-12 rounded-xl relative">
                 <div className="flex justify-center">
-                    <img src={MintingImage} className="rounded-full absolute -top-[4.5rem] border-[6px] border-dark" alt="MintingImage" />
+                    <img src={MintingImage} className="w-4/12 md:w-auto rounded-full absolute -top-[3.5rem] md:-top-[4.5rem] border-[6px] border-dark" alt="MintingImage" />
                 </div>
-                <h2 className="text-5xl font-bold">Get Your Headbox</h2>
-                <p className="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
-                <div className="flex flex-col items-center mt-12">
+                <h2 className="text-3xl md:text-5xl font-bold">Get Your Headbox</h2>
+                <p className="mt-4 text-sm md:text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                <div className="flex flex-col items-center mt-8 md:mt-12">
                     <div className="flex items-center space-x-5">
                         <span>
                             <svg
@@ -34,8 +34,10 @@ function MintingSection() {
                             </svg>
                         </span>
                     </div>
-                    <button className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 mt-12">Mint</button>
-                    <span className="mt-8 font-semibold text-primary">100 / 8888 items has minted.</span>
+                    <button className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 mt-8 md:mt-12">
+                        Mint
+                    </button>
+                    <span className="mt-8 font-semibold text-primary text-sm md:text-base">100 / 8888 items has minted.</span>
                 </div>
             </div>
         </div>

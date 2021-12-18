@@ -36,14 +36,16 @@ const teams = [
 
 function Team() {
     return (
-        <div className="px-12 md:px-20 py-2 md:py-16">
-            <div className="flex gap-12">
-                <div className="w-1/3">
-                    <h2 className="text-4xl font-bold">Meet Headbox Team</h2>
-                    <p className="mt-4">Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse. Vivamus fringilla.</p>
+        <div className="px-12 md:px-20 py-8 md:py-16 mx-auto max-w-[90rem]">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+                <div className="w-full md:w-1/3">
+                    <h2 className="text-3xl md:text-4xl font-bold">Meet Headbox Team</h2>
+                    <p className="mt-4 text-sm md:text-base text-gray-500">
+                        Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse. Vivamus fringilla.
+                    </p>
                 </div>
-                <div className="w-2/3">
-                    <div className="grid grid-cols-3 gap-6">
+                <div className="w-full md:w-2/3">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {teams.map((person) => (
                             <div>
                                 <img className="w-full" src={person.pfp} alt="" />

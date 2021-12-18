@@ -4,12 +4,12 @@ import TraitsImage from '../assets/images/Traits Image.png'
 function Traits() {
     return (
         <div className="px-12 md:px-36">
-            <div className="px-28">
-                <div className="flex items-center">
+            <div className="md:px-28">
+                <div className="flex flex-col md:flex-row md:items-center justify-center">
                     <img className="rounded-3xl" src={TraitsImage} alt="" />
-                    <div className="ml-24">
+                    <div className="md:ml-24 mt-8 md:mt-0">
                         <h2 className="text-4xl font-bold">Headbox Traits</h2>
-                        <div className="mt-4 space-y-4">
+                        <div className="mt-8 md:mt-4 space-y-4 columns-2 md:columns-1">
                             <div className="flex items-center">
                                 <div className="h-6 w-6 rounded-full bg-dark flex items-center justify-center text-white font-bold">1</div>
                                 <span className="font-semibold ml-4">Background</span>

@@ -17,7 +17,7 @@ function Index() {
                     <Main />
                 </div>
             </div>
-            <div className="bg-white mt-12 md:mt-28">
+            <div className="bg-white mt-28">
                 <MintingSection />
             </div>
             <div className="bg-off-white mt-12 md:mt-28">
@@ -32,7 +32,7 @@ function Index() {
             <div className="bg-white mt-12 md:mt-28">
                 <Faq />
             </div>
-            <div className="bg-white mt-12 md:mt-28 pb-2 md:pb-16">
+            <div className="bg-white mt-12 md:mt-28 pb-8 md:pb-16">
                 <Footer />
             </div>
         </div>
