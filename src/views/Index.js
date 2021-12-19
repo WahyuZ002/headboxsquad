@@ -13,7 +13,7 @@ function Index() {
         <div className="font-open-sans text-dark">
             <div className="bg-off-white pt-2 md:pt-16">
                 <Navbar />
-                <div className="mt-12 md:mt-28">
+                <div className="mt-12 md:mt-28 overflow-x-hidden">
                     <Main />
                 </div>
             </div>
