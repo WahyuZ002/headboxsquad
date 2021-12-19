@@ -12,7 +12,7 @@ function Main() {
                 <button className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30">Mint now</button>
             </div>
             <div className="flex justify-center">
-                <img src={Hero} alt="Hero_Image" className="mt-12 max-w-2xl" />
+                <img src={Hero} alt="Hero_Image" className="mt-12 max-w-xl md:max-w-max" />
             </div>
         </div>
     )

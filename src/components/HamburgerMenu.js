@@ -29,17 +29,17 @@ export default function HamburgerMenu() {
                                 </a>
                             </Menu.Item>
                             <Menu.Item>
-                                <a href="#background_story" className="font-medium text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm">
+                                <a href="#roadmap" className="font-medium text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm">
                                     Roadmap
                                 </a>
                             </Menu.Item>
                             <Menu.Item>
-                                <a href="#roadmap" className="font-medium text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm">
+                                <a href="#team" className="font-medium text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm">
                                     Team
                                 </a>
                             </Menu.Item>
                             <Menu.Item>
-                                <a href="#roadmap" className="font-medium text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm">
+                                <a href="#faq" className="font-medium text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm">
                                     FAQ
                                 </a>
                             </Menu.Item>
