@@ -21,7 +21,7 @@ const faq = [
 
 function Faq(props) {
     return (
-        <div className="px-12 md:px-20">
+        <div className="px-12 md:px-20" id="faq">
             <div className="flex flex-col md:flex-row gap-6 md:gap-12 max-w-[90rem] mx-auto">
                 <div className="w-full md:w-1/3">
                     <h2 className="text-3xl md:text-4xl font-bold">Frequently Asked Question</h2>

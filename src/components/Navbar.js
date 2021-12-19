@@ -9,22 +9,22 @@ function Navbar() {
                 <img src={logo} alt="Headbox Logo" />
                 <ul className="flex items-center space-x-10 font-semibold">
                     <li>
-                        <a href="#/" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
+                        <a href="#home" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#/" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
+                        <a href="#roadmap" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
                             Roadmap
                         </a>
                     </li>
                     <li>
-                        <a href="#/" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
+                        <a href="#team" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
                             Team
                         </a>
                     </li>
                     <li>
-                        <a href="#/" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
+                        <a href="#faq" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
                             FAQ
                         </a>
                     </li>
