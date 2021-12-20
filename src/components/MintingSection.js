@@ -15,22 +15,22 @@ function MintingSection() {
                         <span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                class="h-10 w-10 fill-current text-gray-300 hover:text-gray-400 transition-all duration-300 ease-in-out cursor-pointer"
+                                className="h-10 w-10 fill-current text-gray-300 hover:text-gray-400 transition-all duration-300 ease-in-out cursor-pointer"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
                             >
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
                             </svg>
                         </span>
                         <span className="text-3xl font-bold">1</span>
                         <span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                class="h-10 w-10 fill-current text-primary hover:text-violet-800 cursor-pointer transition-all duration-300 ease-in-out"
+                                className="h-10 w-10 fill-current text-primary hover:text-violet-800 cursor-pointer transition-all duration-300 ease-in-out"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
                             >
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
                             </svg>
                         </span>
                     </div>
