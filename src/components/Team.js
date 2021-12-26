@@ -49,9 +49,7 @@ function Team() {
             <div className="flex flex-col md:flex-row gap-6 md:gap-12">
                 <div className="w-full md:w-1/3">
                     <h2 className="text-3xl md:text-4xl font-bold">Meet Headbox Team</h2>
-                    <p className="mt-4 text-sm md:text-base text-gray-500">
-                        Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse. Vivamus fringilla.
-                    </p>
+                    <p className="mt-4 text-sm md:text-base text-gray-500">Hi everyone! So we are a box-united team, we love to hide inside the box but we are thinking out of the box!</p>
                 </div>
                 <div className="w-full md:w-2/3">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
