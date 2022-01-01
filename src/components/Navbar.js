@@ -33,7 +33,6 @@ function Navbar() {
                         <Link to="/comic" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
                             Comic
                         </Link>
-                        <button className="ml-3 text-sm rounded-md bg-secondary px-4 py-[2px] text-white cursor-default">Soon</button>
                     </li>
                 </ul>
                 <button className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30">
