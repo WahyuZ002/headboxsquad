@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../logo.svg'
 import HamburgerMenu from './HamburgerMenu'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     return (
@@ -29,9 +30,9 @@ function Navbar() {
                         </a>
                     </li>
                     <li>
-                        <a href="#/" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
+                        <Link to="/comic" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
                             Comic
-                        </a>
+                        </Link>
                         <button className="ml-3 text-sm rounded-md bg-secondary px-4 py-[2px] text-white cursor-default">Soon</button>
                     </li>
                 </ul>
