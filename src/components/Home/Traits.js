@@ -1,5 +1,5 @@
 import React from 'react'
-import TraitsImage from '../assets/images/Traits Image.png'
+import TraitsImage from '../../assets/images/Traits Image.png'
 
 function Traits() {
     return (

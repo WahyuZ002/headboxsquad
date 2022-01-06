@@ -1,5 +1,5 @@
 import React from 'react'
-import MintingImage from '../assets/images/Minting Image.png'
+import MintingImage from '../../assets/images/Minting Image.png'
 
 function MintingSection() {
     return (

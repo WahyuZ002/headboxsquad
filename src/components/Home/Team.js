@@ -1,5 +1,5 @@
 import React from 'react'
-import Images from '../assets/TeamImages'
+import Images from '../../assets/TeamImages'
 
 const teams = [
     {

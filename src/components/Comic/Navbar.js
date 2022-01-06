@@ -1,29 +1,28 @@
 import React from 'react'
-import Comic1 from '../assets/comics/1.png'
 import { Link } from 'react-router-dom'
 
-export default function Comic() {
+export default function Navbar() {
     return (
-        <div className="min-h-screen bg-extra-dark text-white font-open-sans">
+        <div>
             <nav className="flex items-center justify-between bg-semi-dark p-8">
                 <Link to="/" className="text-lg font-semibold flex items-center gap-3">
                     <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
                     </span>
                     <span>Back to Home</span>
                 </Link>
                 <div className="flex items-center space-x-4">
                     <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 rotate-180 text-gray-500 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 rotate-180 text-gray-500 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                         </svg>
                     </span>
                     <div className="font-semibold text-lg">#1</div>
                     <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                         </svg>
                     </span>
                 </div>
@@ -77,27 +76,6 @@ export default function Comic() {
                     </a>
                 </div>
             </nav>
-            <h1 className="text-center mt-20 text-4xl font-semibold">Title Goes Here</h1>
-
-            {/* Comic Section */}
-            <div className="mt-20 px-12">
-                <div className="flex items-center gap-6">
-                    <div className="w-1/4">
-                        <img src={Comic1} alt="" />
-                    </div>
-                    <div className="w-3/4">
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est quia nobis magni perspiciatis aliquam libero fugit exercitationem tenetur tempora labore blanditiis eos magnam
-                            ut nam, sit excepturi quae alias! Illo? lorem
-                        </p>
-                        <br />
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis asperiores fugiat eligendi amet aut illo suscipit, necessitatibus voluptas doloremque molestiae,
-                            cupiditate nam, sit quae est recusandae ad voluptates architecto iusto!
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
     )
 }

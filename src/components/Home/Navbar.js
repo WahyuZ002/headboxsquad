@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../logo.svg'
+import logo from '../../logo.svg'
 import HamburgerMenu from './HamburgerMenu'
 import { Link } from 'react-router-dom'
 
@@ -30,7 +30,7 @@ function Navbar() {
                         </a>
                     </li>
                     <li>
-                        <Link to="/comic" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
+                        <Link to="/comics" className="text-dark hover:text-primary transition-all duration-300 ease-in-out">
                             Comic
                         </Link>
                     </li>

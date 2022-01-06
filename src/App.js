@@ -1,14 +1,9 @@
-import Home from './views/Home'
-import Comic from './views/Comic'
-import { Routes, Route } from 'react-router-dom'
+import Router from './router'
 
 function App() {
     return (
         <div className="text-dark">
-            <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/comic" element={<Comic />}></Route>
-            </Routes>
+            <Router />
         </div>
     )
 }
