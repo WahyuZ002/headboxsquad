@@ -1,5 +1,8 @@
 import React from 'react'
 import MintingImage from '../../assets/images/Minting Image.png'
+import { useDispatch, useSelector } from 'react-redux'
+import { connect } from '../../redux/blockchain/blockchainActions'
+import { fetchData } from '../../redux/data/dataActions'
 
 function MintingSection() {
     return (
