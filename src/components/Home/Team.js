@@ -54,7 +54,7 @@ function Team() {
                 <div className="w-full md:w-2/3">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {teams.map((person) => (
-                            <div>
+                            <div key={person.name}>
                                 <img className="w-full" src={person.pfp} alt="" />
                                 <div className="mt-3 flex items-center justify-between">
                                     <div>
@@ -63,7 +63,7 @@ function Team() {
                                     </div>
                                     <div className="flex space-x-3">
                                         {person.social_media.map((item) => (
-                                            <div>
+                                            <div key={item.link}>
                                                 {item.icon === 'twitter' ? (
                                                     <a href={item.link} target="_blank" rel="noreferrer">
                                                         <svg
