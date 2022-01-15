@@ -10,7 +10,7 @@ export default function Contents() {
     return (
         <div className="mt-12">
             <h1 className="text-center text-3xl md:text-5xl font-semibold text-gray-200">
-                The Beginning of <span className="text-primary">Headboxsquad</span>
+                The Beginning of <span className="text-primary">Headbox Squad</span>
             </h1>
             <div className="mt-12 md:mt-28 px-12 text-gray-300 font-medium">
                 <div className="flex flex-col md:flex-row items-center gap-6 mb-12">
@@ -19,22 +19,21 @@ export default function Contents() {
                     </div>
                     <div className="md:md:w-3/4">
                         <p>
-                            Pikiran si anak lelaki itu berkelana meski di depannya sedang berdiri anak-anak lain dari akademi yang sama. “Sudahlah, jangan tanyakan itu pada semua guru.”, “iya benar,
-                            lebih baik kau belajar dengan giat, kau kan peringkat terbawah.”, “kenapa tidak gunakan waktumu untuk meningkatkan kemampuanmu saja sih?”.
+                            The young man's mind wandered even though the other kids from the same academy were standing in front of him. "Come on, don't ask that to all teachers.", "That's right, you
+                            better study hard. You're the lowest rank, ain't you?", "Why don't you just use your time to improve your skills anyway?".
                             <br />
-                            <br /> Pem-bully-an ini bukannya baru pertama kali. Anak muda itu terus mendapat perlakuan yang sama dari teman satu akademinya. Hal itu dia dapatkan hanya karena
-                            mempertanyakan kehidupan di sana (sana mana y :') ). Anak muda itu mempertanyakan, kenapa mereka tidak diberi kesempatan untuk membuat sesuatu selain apa yang sudah
-                            diajarkan? dan apa yang menyebabkan mereka begitu tidak suka dengan pertanyaannya?
+                            <br />
+                            This bullying is not the first time. The young man has always been received the same treatment from his fellow academy mates. He got it because he questioned their life.
+                            The young man wondered, why were they not given the opportunity to make something other than what was taught? What caused them to dislike the question so much?
                         </p>
                     </div>
                 </div>
                 <div className="flex flex-col-reverse md:flex-row items-center gap-6 mb-12">
                     <div className="md:w-3/4">
                         <p>
-                            Si anak muda merasa kehidupan yang ia jalani begitu janggal, seperti sudah di atur tanpa memperbolehkan adanya perubahan. Ia merasa tidak tenang dengan kehidupannya. Cara
-                            hidup yang ia dan orang di sekitarnya jalani terasa tidak masuk akal. Meski begitu, di sepanjang jalan yang ia lalui dengan berat, hanya ada orang-orang yang tampak bahagia
-                            dengan kehidupan di sini (sini mana y wkwk). Tapi kebahagiaan itu terasa palsu. Seolah-olah mereka ingin menyembunyikan jati diri mereka dibalik senyuman. Hanyut dalam
-                            pikirannya, anak muda itu terus berjalan hingga ia sampai di <span className="text-red-500">tepi sungai.</span>
+                            The young man felt the life he was living was so strange as if it had been arranged that changes are prohibited. He felt uneasy about his life. The way of life that he and
+                            those around him lived seemed absurd. Even so, along the road that he walked heavily. There were only people who seemed happy with their life. But the happiness felt fake.
+                            As if they wanted to hide their true identity behind a smile. Lost in his thoughts, the young man kept walking until he came across the river bank.
                         </p>
                     </div>
                     <div className="md:w-1/4">
@@ -47,17 +46,16 @@ export default function Contents() {
                     </div>
                     <div className="md:w-3/4">
                         <p>
-                            Keadaan yang sunyi membuatnya tenggelam dalam pikirannya terhadap dunia ini. Pikirannya terlalu dalam hingga ia teringat orang-orang di sekitarnya. Bagaimana mereka
-                            mencemooh pikiran anak muda itu, orang-orang yang menunjukkan rasa tidak suka mereka hingga berbuat buruk. Perasaan janggal yang ia rasakan mulai berubah menjadi getir.
-                            Bukan hidup seperti ini yang ia inginkan.
+                            The silence made him deep in thought about this world. His thoughts were so deep that he remembered the people around him. How they ridicule the young man's mind and people
+                            who showed their dislike to the point of doing evil. The strange feeling he felt began to turn bitter. That wasn't the life he wanted.
                         </p>
                     </div>
                 </div>
                 <div className="flex flex-col-reverse md:flex-row items-center gap-6 mb-12">
                     <div className="md:w-3/4">
                         <p>
-                            Si anak muda bangkit dari duduknya dan beranjak pulang dengan perasaan lebih lega. Lalu pandangannya terhenti pada sebuah kotak kardus. Ide cemerlang terbesit di
-                            pikirannya. Mungkin jika ia menunjukkan apa yang bisa dilakukan selain mengikuti apa yang disuruh orang dewasa, mereka akan paham, pikirnya.
+                            The young man rose from his seat, ready to go home after feeling more relieved. Then his gaze stopped at a cardboard box. A brilliant idea crossed his mind. Maybe if he
+                            showed them what to do besides following what the adults told them to do, they'd understand, he thought.
                         </p>
                     </div>
                     <div className="md:w-1/4">
@@ -70,18 +68,23 @@ export default function Contents() {
                     </div>
                     <div className="md:w-3/4">
                         <p>
-                            Si Anak muda pergi ke akademi dengan perasaan bangga. Dia telah membuat sesuatu yang baru dan itu memuaskan hatinya. Kemanapun ia melangkah, orang-orang memperhatikannya.
-                            Mereka semua menatap dengan tatapan yang tidak bisa dimengerti si anak muda. Meski begitu, tidak ada yang menunjukkan perasaan tidak suka ataupun mencemooh seperti yang
-                            biasa dia dapatkan. Karena itu si anak muda berjalan yakin hingga ke kelasnya. Bahkan teman sekelasnya pun ikut menatap si anak muda seperti orang-orang di sepanjang jalan
-                            sebelumnya. Maka si anak muda yakin, dengan ini dia sudah menunjukkan hal baru yang bisa dilakukan seperti harapannya.
+                            The young man went to the academy feeling both relieved and proud. He had made something new and it satisfied his heart. He felt calm, safe, and at ease in the box. It was
+                            like having a private room, he didn't have to think about people anymore.
+                            <br />
+                            <br />
+                            Wherever he walked, people couldn't take away their eyes on him. They all stared with gazes the young man could not understand. Even so, none of them showed the disdain he
+                            usually gets. Therefore the young man walked confidently to his class. Even his classmates stared at the young boy like everyone else along the street before. So the young
+                            man was sure, with this, he had shown new thing that could be done as he hoped back then.
                         </p>
                     </div>
                 </div>
                 <div className="flex flex-col-reverse md:flex-row items-center gap-6">
                     <div className="md:w-3/4">
                         <p>
-                            Namun, si anak muda tidak menduga bahwa yang dilakukannya kemarin bisa langsung diikuti oleh banyak orang di akademi. Beberapa orang bahkan menyebutnya kepala-kotak (box
-                            head) dan begitulah, Headbox pun dimulai.
+                            However, the young man did not expect what he did yesterday could be immediately followed by many people in the academy. Some people even call it a box-head.
+                            <br />
+                            <br />
+                            <span className="text-primary text-xl font-bold">So, at this point is where the Headbox begins.</span>
                         </p>
                     </div>
                     <div className="md:w-1/4">
