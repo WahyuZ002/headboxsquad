@@ -20,25 +20,45 @@ const teams = [
     {
         name: 'Mikail',
         position: 'Market Analyst',
-        social_media: [{ link: 'https://twitter.com/MikailYordan012' }],
+        social_media: [
+            {
+                icon: 'twitter',
+                link: 'https://twitter.com/MikailYordan012',
+            },
+        ],
         pfp: Images.Team2,
     },
     {
         name: 'DZ',
         position: 'Writer',
-        social_media: [{ link: 'http://instagram.com/dianzeirlina' }],
+        social_media: [
+            {
+                icon: 'instagram',
+                link: 'http://instagram.com/dianzeirlina',
+            },
+        ],
         pfp: Images.Team3,
     },
     {
         name: 'Amru',
         position: 'Illustrator',
-        social_media: [{ link: 'http://twitter.com/amrukun' }],
+        social_media: [
+            {
+                icon: 'twitter',
+                link: 'http://twitter.com/amrukun',
+            },
+        ],
         pfp: Images.Team4,
     },
     {
         name: 'Raihan',
         position: 'Illustrator',
-        social_media: [{ link: 'http://instagram.com/raihanwhyuu' }],
+        social_media: [
+            {
+                icon: 'instagram',
+                link: 'http://instagram.com/raihanwhyuu',
+            },
+        ],
         pfp: Images.Team5,
     },
 ]

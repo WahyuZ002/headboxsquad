@@ -9,7 +9,8 @@ function Main() {
                     <h1 className="text-3xl md:text-5xl font-bold">Discover Every Box</h1>
                     <p className="md:px-36 text-gray-500 text-sm md:text-base">
                         Headbox Squad is a social-life-based NFT collection packed with a boxed perspective. By randomly generated on the Ethereum blockchain, the Headbox Squad launched the first-gen
-                        consisting of 8.888 units and land for each owner.
+                        consisting of 10.000 units and land for each owner. Each character of the Headbox Squad is rendered from a variety of skin, outfits, boxes, and facial expressions! So, it's
+                        unlimited possibilities that you can try yourself.
                     </p>
                     <a
                         href="#minting_section"

@@ -31,6 +31,11 @@ const faq = [
         question: 'Who are you exactly?',
         answer: 'We are just a bunch interested in art, NFT, and JOINING THE METAVERSE! We are so ready not to view the growth of the NFT but also participate in it. We would like to join in the change and be the one who brings something extraordinary to the NFT Space. So, it starts with this Headbox Squad.',
     },
+    {
+        id: 7,
+        question: 'What kind of land will we get?',
+        answer: `It's a land in THE HEADBOX LAND. Every HEADBOX unit is part of our SQUAD so, each holder will get a spot.`,
+    },
 ]
 
 function Faq() {
@@ -40,7 +45,16 @@ function Faq() {
                 <div className="w-full md:w-1/3">
                     <h2 className="text-3xl md:text-4xl font-bold">Frequently Asked Question</h2>
                     <p className="mt-4 text-sm md:text-base">
-                        Can't find the answer you're looking for? Reach out to our <span className="font-semibold text-primary">customer support</span> team.
+                        Can't find the answer you're looking for? Reach out to our{' '}
+                        <a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=headboxsquad@gmail.com"
+                            target={'_blank'}
+                            className="font-semibold text-primary hover:text-gray-900 transition-all duration-300 ease-in"
+                            rel="noreferrer"
+                        >
+                            customer support
+                        </a>{' '}
+                        team.
                     </p>
                 </div>
                 <div className="w-full md:w-2/3 space-y-8">
@@ -50,6 +64,17 @@ function Faq() {
                             <p className="mt-2 text-gray-500 text-sm md:text-base">{item.answer}</p>
                         </div>
                     ))}
+                    <div>
+                        <p className="font-semibold text-sm md:text-base">What exactly is your benefit as HEADBOX SQUAD holders?</p>
+                        <p className="mt-2 text-gray-500 text-sm md:text-base">
+                            You don't have to worry as a holder you're not gonna get the art only but also a free land. Yes, FREE. *the terms and conditions will be announced later.
+                            <br />
+                            <br />
+                            Another benefit is that you'll get access to our giveaway as you can see in the roadmap. There's not only a giveaway but also EVENT & MERCH! AND the most of them all is
+                            that you'll be welcome as part of our community. What you get as part of the community is that you'll get every sole information & also be part of our voices to fight
+                            bullying activities.
+                        </p>
+                    </div>
                     <div>
                         <p className="font-semibold text-sm md:text-base">This is awesome. How do I get involved in it?</p>
                         <p className="mt-2 text-gray-500 text-sm md:text-base">

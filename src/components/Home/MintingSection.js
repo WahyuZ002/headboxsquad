@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { connect } from '../../redux/blockchain/blockchainActions'
 import { fetchData } from '../../redux/data/dataActions'
 
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const truncate = (input, len) => (input.length > len ? `${input.substring(0, len)}...` : input)
 
 function MintingSection() {
@@ -13,6 +16,7 @@ function MintingSection() {
     const [claimingNft, setClaimingNft] = useState(false)
     const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`)
     const [mintAmount, setMintAmount] = useState(1)
+    const [isComingSoon, setIsComingSoon] = useState(true)
 
     const [canIncrementAmount, setCanIncrementAmount] = useState(true)
     const [canDecrementAmount, setCanDecrementAmount] = useState(true)
@@ -107,6 +111,8 @@ function MintingSection() {
         SET_CONFIG(config)
     }
 
+    const notify = () => toast.warn('Minting dApp will announce soon!')
+
     useEffect(() => {
         getConfig()
     }, [])
@@ -116,108 +122,155 @@ function MintingSection() {
     }, [blockchain.account])
 
     return (
-        <div className="flex justify-center" id="minting_section">
-            <div className="text-center max-w-xs md:max-w-[403px] border-[6px] border-dark pt-20 md:pt-24 pb-8 md:pb-12 px-6 md:px-12 rounded-xl relative">
-                <div className="flex justify-center">
-                    <img src={MintingImage} className="w-4/12 md:w-auto rounded-full absolute -top-[3.5rem] md:-top-[4.5rem] border-[6px] border-dark" alt="MintingImage" />
-                </div>
-                <h2 className="text-3xl md:text-5xl font-bold">Get Your Headbox</h2>
-                {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
-                    <>
-                        <h2>The sale has ended.</h2>
-                        <p>You can still find {CONFIG.NFT_NAME} on</p>
-                        <a target={'_blank'} href={CONFIG.MARKETPLACE_LINK} rel="noreferrer">
-                            {CONFIG.MARKETPLACE}
-                        </a>
-                    </>
-                ) : (
-                    <>
-                        <p className="text-gray-500 mt-6">
-                            1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST} {CONFIG.NETWORK.SYMBOL}.
-                            <br />
-                            Excluding gas fee.
-                        </p>
-                    </>
-                )}
-                <div className="flex flex-col items-center mt-8 md:mt-12">
-                    <div className="flex items-center space-x-5">
-                        <span
-                            onClick={(e) => {
-                                e.preventDefault()
-                                decrementMintAmount()
-                            }}
-                            className="cursor-pointer"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className={
-                                    'h-10 w-10 transition-all duration-300 ease-in-out cursor-pointer' +
-                                    (canDecrementAmount ? 'fill-current text-primary hover:text-violet-800' : 'fill-current text-gray-300')
-                                }
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
+        <div>
+            {isComingSoon ? (
+                <div className="flex justify-center" id="minting_section">
+                    <ToastContainer />
+                    <div className="text-center max-w-xs md:max-w-[403px] border-[6px] border-dark pt-20 md:pt-24 pb-8 md:pb-12 px-6 md:px-12 rounded-xl relative">
+                        <div className="flex justify-center">
+                            <img src={MintingImage} className="w-4/12 md:w-auto rounded-full absolute -top-[3.5rem] md:-top-[4.5rem] border-[6px] border-dark" alt="MintingImage" />
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-bold">Get Your Headbox</h2>
+                        <p className="mt-4 text-sm md:text-base text-gray-500">Coming Soon</p>
+                        <div className="flex flex-col items-center mt-8 md:mt-12">
+                            <div className="flex items-center space-x-5">
+                                <span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-10 w-10 fill-current text-gray-300 hover:text-gray-400 transition-all duration-300 ease-in-out cursor-pointer"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span className="text-3xl font-bold">1</span>
+                                <span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-10 w-10 fill-current text-primary hover:text-violet-800 cursor-pointer transition-all duration-300 ease-in-out"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <button
+                                className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 mt-8 md:mt-12"
+                                onClick={notify}
                             >
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
-                            </svg>
-                        </span>
-                        <span className="text-3xl font-bold">{mintAmount}</span>
-                        <span
-                            onClick={(e) => {
-                                e.preventDefault()
-                                incrementMintAmount()
-                            }}
-                            className="cursor-pointer"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className={
-                                    'h-10 w-10 transition-all duration-300 ease-in-out cursor-pointer' +
-                                    (canIncrementAmount ? 'fill-current text-primary hover:text-violet-800' : 'fill-current text-gray-300')
-                                }
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                            >
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
-                            </svg>
-                        </span>
+                                Mint
+                            </button>
+                            <span className="mt-8 font-semibold text-primary text-sm md:text-base">0 / 10.000 items has minted.</span>
+                        </div>
                     </div>
-                    {blockchain.account === '' || blockchain.smartContract === null ? (
-                        <button
-                            className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 mt-8 md:mt-12"
-                            onClick={(e) => {
-                                e.preventDefault()
-                                dispatch(connect())
-                                getData()
-                            }}
-                        >
-                            Connect
-                            {blockchain.errorMsg !== '' ? (
-                                <>
-                                    <p>{blockchain.errorMsg}</p>
-                                </>
-                            ) : null}
-                        </button>
-                    ) : (
-                        <button
-                            className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 mt-8 md:mt-12"
-                            onClick={(e) => {
-                                e.preventDefault()
-                                claimNFTs()
-                                getData()
-                            }}
-                        >
-                            {claimingNft ? 'BUSY' : 'BUY'}
-                        </button>
-                    )}
-                    <span className="mt-8 font-semibold text-primary text-sm md:text-base">
-                        {data.totalSupply} / {CONFIG.MAX_SUPPLY} items has minted.
-                    </span>
-                    <a target={'_blank'} href={CONFIG.SCAN_LINK} rel="noreferrer" className="text-xs mt-3 text-primary font-medium">
-                        {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
-                    </a>
-                    <p>{feedback}</p>
                 </div>
-            </div>
+            ) : (
+                <div className="flex justify-center" id="minting_section">
+                    <div className="text-center max-w-xs md:max-w-[403px] border-[6px] border-dark pt-20 md:pt-24 pb-8 md:pb-12 px-6 md:px-12 rounded-xl relative">
+                        <div className="flex justify-center">
+                            <img src={MintingImage} className="w-4/12 md:w-auto rounded-full absolute -top-[3.5rem] md:-top-[4.5rem] border-[6px] border-dark" alt="MintingImage" />
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-bold">Get Your Headbox</h2>
+                        {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
+                            <>
+                                <h2>The sale has ended.</h2>
+                                <p>You can still find {CONFIG.NFT_NAME} on</p>
+                                <a target={'_blank'} href={CONFIG.MARKETPLACE_LINK} rel="noreferrer">
+                                    {CONFIG.MARKETPLACE}
+                                </a>
+                            </>
+                        ) : (
+                            <>
+                                <p className="text-gray-500 mt-6">
+                                    1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST} {CONFIG.NETWORK.SYMBOL}.
+                                    <br />
+                                    Excluding gas fee.
+                                </p>
+                            </>
+                        )}
+                        <div className="flex flex-col items-center mt-8 md:mt-12">
+                            <div className="flex items-center space-x-5">
+                                <span
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        decrementMintAmount()
+                                    }}
+                                    className="cursor-pointer"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className={
+                                            'h-10 w-10 transition-all duration-300 ease-in-out cursor-pointer' +
+                                            (canDecrementAmount ? 'fill-current text-primary hover:text-violet-800' : 'fill-current text-gray-300')
+                                        }
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span className="text-3xl font-bold">{mintAmount}</span>
+                                <span
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        incrementMintAmount()
+                                    }}
+                                    className="cursor-pointer"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className={
+                                            'h-10 w-10 transition-all duration-300 ease-in-out cursor-pointer' +
+                                            (canIncrementAmount ? 'fill-current text-primary hover:text-violet-800' : 'fill-current text-gray-300')
+                                        }
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
+                                    </svg>
+                                </span>
+                            </div>
+                            {blockchain.account === '' || blockchain.smartContract === null ? (
+                                <button
+                                    className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 mt-8 md:mt-12"
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        dispatch(connect())
+                                        getData()
+                                    }}
+                                >
+                                    Connect
+                                    {blockchain.errorMsg !== '' ? (
+                                        <>
+                                            <p>{blockchain.errorMsg}</p>
+                                        </>
+                                    ) : null}
+                                </button>
+                            ) : (
+                                <button
+                                    className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 mt-8 md:mt-12"
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        claimNFTs()
+                                        getData()
+                                    }}
+                                >
+                                    {claimingNft ? 'BUSY' : 'BUY'}
+                                </button>
+                            )}
+                            <span className="mt-8 font-semibold text-primary text-sm md:text-base">
+                                {data.totalSupply} / {CONFIG.MAX_SUPPLY} items has minted.
+                            </span>
+                            <a target={'_blank'} href={CONFIG.SCAN_LINK} rel="noreferrer" className="text-xs mt-3 text-primary font-medium">
+                                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
+                            </a>
+                            <p>{feedback}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

@@ -9,11 +9,12 @@ function Roadmap() {
                 <div className="mb-8 flex justify-between items-center w-full md:flex-row-reverse">
                     <div className="hidden md:block w-5/12"></div>
                     <div className="z-20">
-                        <div className="flex items-center justify-center bg-teal-400 text-white w-8 h-8 rounded-full">
+                        {/* <div className="flex items-center justify-center bg-teal-400 text-white w-8 h-8 rounded-full">
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                        </div>
+                        </div> */}
+                        <div className="bg-gray-200 w-8 h-8 rounded-full"></div>
                     </div>
                     <div className="bg-white shadow-2xl shadow-gray-400/10 rounded-xl  w-full md:w-5/12 p-6 md:px-8 md:py-6 ml-8 md:ml-0">
                         <h3 className="font-bold text-base md:text-lg">20% Sold</h3>
@@ -26,11 +27,7 @@ function Roadmap() {
                 <div className="mb-8 flex justify-between items-center w-full">
                     <div className="hidden md:block w-5/12"></div>
                     <div className="z-20">
-                        <div className="flex items-center justify-center bg-teal-400 text-white w-8 h-8 rounded-full">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                        </div>
+                        <div className="bg-gray-200 w-8 h-8 rounded-full"></div>
                     </div>
                     <div className="bg-white shadow-2xl shadow-gray-400/10 rounded-xl  w-full md:w-5/12 p-6 md:px-8 md:py-6 ml-8 md:ml-0">
                         <h3 className="font-bold text-base md:text-lg">40% Sold</h3>
