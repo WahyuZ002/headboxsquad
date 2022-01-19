@@ -1,9 +1,15 @@
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 export default function HamburgerMenu() {
+    const notify = () => toast.warn('Minting dApp will announce soon!')
+
     return (
         <div className="block md:hidden text-right z-10">
+            <ToastContainer />
             <Menu as="div" className="relative inline-block text-left">
                 <div>
                     <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-primary rounded-md opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 shadow-xl shadow-primary/30">
@@ -44,24 +50,19 @@ export default function HamburgerMenu() {
                                 </a>
                             </Menu.Item>
                             <Menu.Item>
-                                <div className="flex items-center">
-                                    <a href="#roadmap" className="font-medium text-gray-900 group flex rounded-md items-center px-2 py-2 text-sm">
-                                        Comic
-                                    </a>
-                                    <button className="ml-3 text-sm rounded-md bg-secondary px-3 h-5 text-white cursor-default">Soon</button>
-                                </div>
+                                <a href="#roadmap" className="font-medium text-gray-900 group flex rounded-md items-center px-2 py-2 text-sm">
+                                    Comic
+                                </a>
                             </Menu.Item>
                         </div>
                         <div className="p-3">
                             <Menu.Item>
-                                <a
-                                    href="https://opensea.io/collection/boredapeskullnotclub"
-                                    target="_blank"
-                                    rel="noreferrer"
+                                <button
                                     className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-2 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 text-sm block text-center"
+                                    onClick={notify}
                                 >
                                     Connect to your wallet
-                                </a>
+                                </button>
                             </Menu.Item>
                         </div>
                     </Menu.Items>
