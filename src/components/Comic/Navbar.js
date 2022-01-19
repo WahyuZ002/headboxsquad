@@ -7,13 +7,13 @@ export default function Navbar() {
             <nav className="flex items-center justify-between py-8 px-12">
                 <Link to="/" className="text-lg font-semibold flex items-center gap-3">
                     <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
                     </span>
-                    <span>Back to Home</span>
+                    <span className="text-sm md:text-base">Back to Home</span>
                 </Link>
-                <div className="flex gap-8">
+                <div className="hidden md:flex gap-8">
                     <a href="https://twitter.com/DegenGoat_NFT" target="_blank" rel="noreferrer">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

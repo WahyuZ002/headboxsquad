@@ -1,5 +1,6 @@
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -50,9 +51,9 @@ export default function HamburgerMenu() {
                                 </a>
                             </Menu.Item>
                             <Menu.Item>
-                                <a href="#roadmap" className="font-medium text-gray-900 group flex rounded-md items-center px-2 py-2 text-sm">
+                                <Link to="/comics" className="font-medium text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm">
                                     Comic
-                                </a>
+                                </Link>
                             </Menu.Item>
                         </div>
                         <div className="p-3">
