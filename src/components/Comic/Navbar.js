@@ -14,7 +14,7 @@ export default function Navbar() {
                     <span className="text-sm md:text-base">Back to Home</span>
                 </Link>
                 <div className="hidden md:flex gap-8">
-                    <a href="https://twitter.com/DegenGoat_NFT" target="_blank" rel="noreferrer">
+                    <a href="https://twitter.com/headboxsquad?s=21" target="_blank" rel="noreferrer">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"

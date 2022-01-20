@@ -6,7 +6,7 @@ function Footer(props) {
             <div className="flex items-center justify-between">
                 <p className="text-sm md:text-base">&copy; 2021 Headboxsquad</p>
                 <div className="flex gap-6">
-                    <a href="https://twitter.com/HeadboxSquadNFT" target="_blank" rel="noreferrer">
+                    <a href="https://twitter.com/headboxsquad?s=21" target="_blank" rel="noreferrer">
                         <svg
                             stroke="currentColor"
                             fill="currentColor"
