@@ -79,7 +79,7 @@ function Faq() {
                         <p className="font-semibold text-sm md:text-base">This is awesome. How do I get involved in it?</p>
                         <p className="mt-2 text-gray-500 text-sm md:text-base">
                             Just hop over to this{' '}
-                            <a href="https://discord.gg/HxAakxvagA" target="_blank" rel="noreferrer" className="font-semibold text-primary border-primary hover:underline">
+                            <a href="https://discord.gg/VYCCKKjnfu" target="_blank" rel="noreferrer" className="font-semibold text-primary border-primary hover:underline">
                                 link
                             </a>
                             , join in on the conversation, and let us know your ideas!
