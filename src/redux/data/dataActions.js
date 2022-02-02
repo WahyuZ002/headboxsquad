@@ -1,5 +1,6 @@
 // log
 import store from '../store'
+import { toast } from 'react-toastify'
 
 const fetchDataRequest = () => {
     return {
@@ -40,6 +41,7 @@ export const fetchData = () => {
         } catch (err) {
             console.log(err)
             dispatch(fetchDataFailed('Could not load data from contract.'))
+            toast.error('Could not load data from contract.')
         }
     }
 }

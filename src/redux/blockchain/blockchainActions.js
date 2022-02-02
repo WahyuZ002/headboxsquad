@@ -4,6 +4,8 @@ import Web3 from 'web3'
 // log
 import { fetchData } from '../data/dataActions'
 
+import { toast } from 'react-toastify'
+
 const connectRequest = () => {
     return {
         type: 'CONNECTION_REQUEST',
@@ -79,12 +81,15 @@ export const connect = () => {
                     // Add listeners end
                 } else {
                     dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`))
+                    toast.error(`Change network to ${CONFIG.NETWORK.NAME}.`)
                 }
             } catch (err) {
                 dispatch(connectFailed('Something went wrong.'))
+                toast.error('Something went wrong.')
             }
         } else {
             dispatch(connectFailed('Install Metamask.'))
+            toast.error('Install Metamask.')
         }
     }
 }

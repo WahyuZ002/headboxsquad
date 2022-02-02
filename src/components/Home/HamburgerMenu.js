@@ -1,16 +1,27 @@
+import { useEffect, Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import { connect } from '../../redux/blockchain/blockchainActions'
+import { fetchData } from '../../redux/data/dataActions'
 
 export default function HamburgerMenu() {
-    const notify = () => toast.warn('Minting dApp will announce soon!')
+    const dispatch = useDispatch()
+    const blockchain = useSelector((state) => state.blockchain)
+
+    const getData = () => {
+        if (blockchain.account !== '' && blockchain.smartContract !== null) {
+            dispatch(fetchData(blockchain.account))
+        }
+    }
+
+    useEffect(() => {
+        getData()
+    }, [blockchain.account])
 
     return (
         <div className="block md:hidden text-right z-10">
-            <ToastContainer />
             <Menu as="div" className="relative inline-block text-left">
                 <div>
                     <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-primary rounded-md opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 shadow-xl shadow-primary/30">
@@ -60,7 +71,11 @@ export default function HamburgerMenu() {
                             <Menu.Item>
                                 <button
                                     className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-2 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 text-sm block text-center"
-                                    onClick={notify}
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        dispatch(connect())
+                                        getData()
+                                    }}
                                 >
                                     Connect to your wallet
                                 </button>
