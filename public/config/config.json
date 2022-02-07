@@ -1,18 +1,18 @@
 {
-    "CONTRACT_ADDRESS": "0x7eDDf15b2a520d61DDC1fADb05B562f86A0F36D7",
-    "SCAN_LINK": "https://rinkeby.etherscan.io/token/0x7eDDf15b2a520d61DDC1fADb05B562f86A0F36D7",
+    "CONTRACT_ADDRESS": "0xD0EC457e5DE152bF113a5d00BB4398e509055FDF",
+    "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xD0EC457e5DE152bF113a5d00BB4398e509055FDF",
     "NETWORK": {
         "NAME": "Rinkeby",
         "SYMBOL": "Rinkeby",
         "ID": 4
     },
-    "NFT_NAME": "Wahyu",
-    "SYMBOL": "Wahyu NFT",
-    "MAX_SUPPLY": 1000,
-    "WEI_COST": 100000000000000,
-    "DISPLAY_COST": 0.0001,
+    "NFT_NAME": "Rounded Eye",
+    "SYMBOL": "RE",
+    "MAX_SUPPLY": 400,
+    "WEI_COST": 10000000000000000,
+    "DISPLAY_COST": 0.001,
     "GAS_LIMIT": 285000,
-    "MARKETPLACE": "Opeansea",
+    "MARKETPLACE": "Opensea",
     "MARKETPLACE_LINK": "https://opensea.io/collection/nerdy-coder-clones",
     "SHOW_BACKGROUND": false
 }

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { connect } from '../../redux/blockchain/blockchainActions'
 import { fetchData } from '../../redux/data/dataActions'
+import { truncate } from '../../utils/String'
 
 function Navbar() {
     const dispatch = useDispatch()
@@ -59,7 +60,10 @@ function Navbar() {
                         Connect to a wallet
                     </button>
                 ) : (
-                    <button className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30">Connected</button>
+                    <button className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 flex items-center">
+                        <span className="w-3 h-3 rounded-full bg-green-300 mr-2"></span>
+                        <span>{truncate(blockchain.account, 40)}</span>
+                    </button>
                 )}
             </nav>
             <div className="flex md:hidden justify-between items-center w-full p-4">

@@ -1,12 +1,12 @@
 import React from 'react'
-import Main from '../components/Home/Main'
-import Navbar from '../components/Home/Navbar'
-import MintingSection from '../components/Home/MintingSection'
-import Roadmap from '../components/Home/Roadmap'
-import Footer from '../components/Home/Footer'
-import Traits from '../components/Home/Traits'
-import Team from '../components/Home/Team'
-import Faq from '../components/Home/Faq'
+import Main from '../components/home/Main'
+import Navbar from '../components/home/Navbar'
+import MintingSection from '../components/home/MintingSection'
+import Roadmap from '../components/home/Roadmap'
+import Footer from '../components/home/Footer'
+import Traits from '../components/home/Traits'
+import Team from '../components/home/Team'
+import Faq from '../components/home/Faq'
 
 function Home() {
     return (

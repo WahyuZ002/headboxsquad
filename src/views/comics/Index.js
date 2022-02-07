@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../../components/Comic/Navbar'
-import Contents from '../../components/Comic/Contents'
+import Navbar from '../../components/comic/Navbar'
+import Contents from '../../components/comic/Contents'
 
 export default function Index() {
     return (

@@ -3,6 +3,7 @@ import MintingImage from '../../assets/images/Minting Image.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { connect } from '../../redux/blockchain/blockchainActions'
 import { fetchData } from '../../redux/data/dataActions'
+import ThreeDotsWave from '../public/ThreeDotsWave'
 
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -14,10 +15,11 @@ function MintingSection() {
     const blockchain = useSelector((state) => state.blockchain)
     const data = useSelector((state) => state.data)
     const [claimingNft, setClaimingNft] = useState(false)
+    const [connectedWallet, setConnectedWallet] = useState(false)
     const [mintAmount, setMintAmount] = useState(1)
 
     const [canIncrementAmount, setCanIncrementAmount] = useState(true)
-    const [canDecrementAmount, setCanDecrementAmount] = useState(true)
+    const [canDecrementAmount, setCanDecrementAmount] = useState(false)
 
     const [CONFIG, SET_CONFIG] = useState({
         CONTRACT_ADDRESS: '',
@@ -39,7 +41,7 @@ function MintingSection() {
     })
 
     const claimNFTs = () => {
-        let cost = CONFIG.WEI_COST
+        let cost = data.cost
         let gasLimit = CONFIG.GAS_LIMIT
         let totalCostWei = String(cost * mintAmount)
         let totalGasLimit = String(gasLimit * mintAmount)
@@ -85,11 +87,11 @@ function MintingSection() {
 
     const incrementMintAmount = () => {
         let newMintAmount = mintAmount + 1
-        if (newMintAmount === 10) {
+        if (newMintAmount === 20) {
             setCanIncrementAmount(false)
         }
-        if (newMintAmount > 10) {
-            newMintAmount = 10
+        if (newMintAmount > 20) {
+            newMintAmount = 20
         }
         setMintAmount(newMintAmount)
         setCanDecrementAmount(true)
@@ -98,6 +100,7 @@ function MintingSection() {
     const getData = () => {
         if (blockchain.account !== '' && blockchain.smartContract !== null) {
             dispatch(fetchData(blockchain.account))
+            setConnectedWallet(true)
         }
     }
 
@@ -142,7 +145,6 @@ function MintingSection() {
                             <p className="text-gray-500 mt-6">
                                 1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST} {CONFIG.NETWORK.SYMBOL}.
                                 <br />
-                                Excluding gas fee.
                             </p>
                         </>
                     )}
@@ -200,19 +202,39 @@ function MintingSection() {
                                 Connect
                             </button>
                         ) : (
-                            <button
-                                className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 mt-8 md:mt-12"
-                                onClick={(e) => {
-                                    e.preventDefault()
-                                    claimNFTs()
-                                    getData()
-                                }}
-                            >
-                                {claimingNft ? 'BUSY' : 'BUY'}
-                            </button>
+                            <>
+                                {data.loading ? (
+                                    <button className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 mt-8 md:mt-12">
+                                        Loading . . .
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="bg-primary hover:bg-violet-800 transition-all duration-300 ease-in-out px-6 py-3 rounded-lg text-white font-bold shadow-xl shadow-primary/30 mt-8 md:mt-12"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            claimNFTs()
+                                            getData()
+                                        }}
+                                    >
+                                        {claimingNft ? <ThreeDotsWave /> : 'BUY'}
+                                    </button>
+                                )}
+                            </>
                         )}
                         <span className="mt-8 font-semibold text-primary text-sm md:text-base">
-                            {data.totalSupply} / {CONFIG.MAX_SUPPLY} items has minted.
+                            {!connectedWallet ? (
+                                <span>Please Connect your wallet first</span>
+                            ) : (
+                                <>
+                                    {data.loading ? (
+                                        <span>XXX / {CONFIG.MAX_SUPPLY} items has minted.</span>
+                                    ) : (
+                                        <span>
+                                            {data.totalSupply} / {CONFIG.MAX_SUPPLY} items has minted.
+                                        </span>
+                                    )}
+                                </>
+                            )}
                         </span>
                         <a target={'_blank'} href={CONFIG.SCAN_LINK} rel="noreferrer" className="text-xs mt-3 text-primary font-medium">
                             {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
