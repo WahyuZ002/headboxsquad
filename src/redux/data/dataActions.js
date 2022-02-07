@@ -28,6 +28,12 @@ export const fetchData = () => {
         try {
             let totalSupply = await store.getState().blockchain.smartContract.methods.totalSupply().call()
             let cost = await store.getState().blockchain.smartContract.methods.cost().call()
+            let OGCanMint = await store.getState().blockchain.smartContract.methods.OGCanMint().call()
+
+            // OG Can Mint
+            if (OGCanMint === true) {
+                cost = 0
+            }
 
             dispatch(
                 fetchDataSuccess({
