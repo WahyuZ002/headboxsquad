@@ -1,18 +1,18 @@
 {
-    "CONTRACT_ADDRESS": "0x0aB74204144590373e74ca718D54B8eCA20DA1c1",
-    "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x0aB74204144590373e74ca718D54B8eCA20DA1c1",
+    "CONTRACT_ADDRESS": "0x6B0298A7f3747d079A53B6667991e61711d6d225",
+    "SCAN_LINK": "https://etherscan.io/address/0x6B0298A7f3747d079A53B6667991e61711d6d225",
     "NETWORK": {
-        "NAME": "Rinkeby",
-        "SYMBOL": "Rinkeby",
-        "ID": 4
+        "NAME": "Ethereum",
+        "SYMBOL": "ETH",
+        "ID": 1
     },
-    "NFT_NAME": "Rounded Eye",
-    "SYMBOL": "RE",
-    "MAX_SUPPLY": 400,
-    "WEI_COST": 1000000000000000,
-    "DISPLAY_COST": 0.001,
+    "NFT_NAME": "Headbox Squad",
+    "SYMBOL": "HBS",
+    "MAX_SUPPLY": 10000,
+    "WEI_COST": 40000000000000000,
+    "DISPLAY_COST": 0.04,
     "GAS_LIMIT": 285000,
     "MARKETPLACE": "Opensea",
-    "MARKETPLACE_LINK": "https://opensea.io/collection/nerdy-coder-clones",
+    "MARKETPLACE_LINK": "https://opensea.io",
     "SHOW_BACKGROUND": false
 }
