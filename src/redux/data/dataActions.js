@@ -28,6 +28,7 @@ export const fetchData = () => {
         try {
             let totalSupply = await store.getState().blockchain.smartContract.methods.totalSupply().call()
             let cost = await store.getState().blockchain.smartContract.methods.cost().call()
+            let paused = await store.getState().blockchain.smartContract.methods.paused().call()
             let OGCanMint = await store.getState().blockchain.smartContract.methods.OGCanMint().call()
 
             // OG Can Mint
@@ -39,6 +40,7 @@ export const fetchData = () => {
                 fetchDataSuccess({
                     totalSupply,
                     cost,
+                    paused,
                 })
             )
         } catch (err) {
