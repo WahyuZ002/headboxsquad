@@ -87,11 +87,11 @@ function MintingSection() {
 
     const incrementMintAmount = () => {
         let newMintAmount = mintAmount + 1
-        if (newMintAmount === 20) {
+        if (newMintAmount === 1) {
             setCanIncrementAmount(false)
         }
-        if (newMintAmount > 20) {
-            newMintAmount = 20
+        if (newMintAmount > 1) {
+            newMintAmount = 1
         }
         setMintAmount(newMintAmount)
         setCanDecrementAmount(true)
@@ -159,10 +159,7 @@ function MintingSection() {
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className={
-                                        'h-10 w-10 transition-all duration-300 ease-in-out cursor-pointer' +
-                                        (canDecrementAmount ? 'fill-current text-primary hover:text-violet-800' : 'fill-current text-gray-300')
-                                    }
+                                    className={'h-10 w-10 transition-all duration-300 ease-in-out cursor-pointer' + (canDecrementAmount ? 'fill-current text-gray-300' : 'fill-current text-gray-300')}
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
                                 >
@@ -179,10 +176,7 @@ function MintingSection() {
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className={
-                                        'h-10 w-10 transition-all duration-300 ease-in-out cursor-pointer' +
-                                        (canIncrementAmount ? 'fill-current text-primary hover:text-violet-800' : 'fill-current text-gray-300')
-                                    }
+                                    className={'h-10 w-10 transition-all duration-300 ease-in-out cursor-pointer' + (canIncrementAmount ? 'fill-current text-gray-300' : 'fill-current text-gray-300')}
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
                                 >
