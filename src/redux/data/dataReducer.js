@@ -5,6 +5,7 @@ const initialState = {
     error: false,
     errorMsg: '',
     paused: false,
+    currentWalletSupply: 0,
 }
 
 const dataReducer = (state = initialState, action) => {
@@ -25,6 +26,7 @@ const dataReducer = (state = initialState, action) => {
                 error: false,
                 errorMsg: '',
                 paused: action.payload.paused,
+                currentWalletSupply: action.payload.currentWalletSupply,
             }
         case 'CHECK_DATA_FAILED':
             return {

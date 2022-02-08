@@ -24,6 +24,7 @@ function MintingSection() {
     const [CONFIG, SET_CONFIG] = useState({
         CONTRACT_ADDRESS: '',
         SCAN_LINK: '',
+        MAX_SUPPLY_PER_ADDRESS: '',
         NETWORK: {
             NAME: '',
             SYMBOL: '',
@@ -44,36 +45,40 @@ function MintingSection() {
         if (data.paused) {
             toast.info('The Minting is Paused.')
         } else {
-            let cost = data.cost
-            let gasLimit = CONFIG.GAS_LIMIT
-            let totalCostWei = String(cost * mintAmount)
-            let totalGasLimit = String(gasLimit * mintAmount)
-            console.log('Cost: ', totalCostWei)
-            console.log('Gas limit: ', totalGasLimit)
-            // setFeedback(`Minting your ${CONFIG.NFT_NAME}...`)
-            toast.info(`Minting your ${CONFIG.NFT_NAME}...`)
-            setClaimingNft(true)
-            blockchain.smartContract.methods
-                .mint(mintAmount)
-                .send({
-                    gasLimit: String(totalGasLimit),
-                    to: CONFIG.CONTRACT_ADDRESS,
-                    from: blockchain.account,
-                    value: totalCostWei,
-                })
-                .once('error', (err) => {
-                    console.log(err)
-                    // setFeedback('Sorry, something went wrong please try again later.')
-                    toast.error('Sorry, something went wrong please try again later.')
-                    setClaimingNft(false)
-                })
-                .then((receipt) => {
-                    console.log(receipt)
-                    // setFeedback(`WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`)
-                    toast.success(`WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`)
-                    setClaimingNft(false)
-                    dispatch(fetchData(blockchain.account))
-                })
+            if (data.currentWalletSupply + mintAmount > CONFIG.MAX_SUPPLY_PER_ADDRESS) {
+                toast.warning('You have exceeded the max limit of minting.')
+            } else {
+                let cost = data.cost
+                let gasLimit = CONFIG.GAS_LIMIT
+                let totalCostWei = String(cost * mintAmount)
+                let totalGasLimit = String(gasLimit * mintAmount)
+                console.log('Cost: ', totalCostWei)
+                console.log('Gas limit: ', totalGasLimit)
+                // setFeedback(`Minting your ${CONFIG.NFT_NAME}...`)
+                toast.info(`Minting your ${CONFIG.NFT_NAME}...`)
+                setClaimingNft(true)
+                blockchain.smartContract.methods
+                    .mint(mintAmount)
+                    .send({
+                        gasLimit: String(totalGasLimit),
+                        to: CONFIG.CONTRACT_ADDRESS,
+                        from: blockchain.account,
+                        value: totalCostWei,
+                    })
+                    .once('error', (err) => {
+                        console.log(err)
+                        // setFeedback('Sorry, something went wrong please try again later.')
+                        toast.error('Sorry, something went wrong please try again later.')
+                        setClaimingNft(false)
+                    })
+                    .then((receipt) => {
+                        console.log(receipt)
+                        // setFeedback(`WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`)
+                        toast.success(`WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`)
+                        setClaimingNft(false)
+                        dispatch(fetchData(blockchain.account))
+                    })
+            }
         }
     }
 
@@ -243,6 +248,13 @@ function MintingSection() {
                         <a target={'_blank'} href={CONFIG.SCAN_LINK} rel="noreferrer" className="text-xs mt-3 text-primary font-medium">
                             {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
                         </a>
+                        {connectedWallet && (
+                            <div className="flex justify-center mt-4">
+                                <span className="bg-semi-dark px-5 py-1 rounded-full text-sm text-green-400 font-bold">
+                                    <span>{data.loading ? <>X</> : <>{data.currentWalletSupply}</>}</span> / {CONFIG.MAX_SUPPLY_PER_ADDRESS} has minted
+                                </span>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
