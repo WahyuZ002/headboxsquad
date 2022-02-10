@@ -1,11 +1,9 @@
 import Router from './router'
+import Maintenance from './components/Maintenance'
 
 function App() {
-    return (
-        <div className="text-dark">
-            <Router />
-        </div>
-    )
+    const maintenance = true
+    return <div className="text-dark">{maintenance ? <Maintenance /> : <Router />}</div>
 }
 
 export default App
